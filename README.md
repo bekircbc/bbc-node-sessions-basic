@@ -27,6 +27,8 @@
       }
       });
 
+-- for sessions and cookies
+
 ## testing LOGIN
 
 -- test login with postmann, test.rest or requests.http

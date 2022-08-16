@@ -14,7 +14,7 @@ app.use(
   session({
     resave: true,
     saveUninitialized: true,
-    secret: "tempsecret",
+    secret: process.env.SESSION_SECRET,
   })
 );
 
