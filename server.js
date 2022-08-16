@@ -51,7 +51,7 @@ app.get("/login/:username", (req, res) => {
   const user = users.find((user) => user.username === req.params.username);
   if (user) {
     req.session.user = user;
-    req.session.cookie.expires = new Date(Date.now() + 20000);
+    req.session.cookie.expires = new Date(Date.now() + 30000);
     req.session.save();
     res.send(`User logged in: ${JSON.stringify(user)}`);
   } else {
@@ -65,6 +65,12 @@ app.get("/current-user", (req, res) => {
   } else {
     res.send("no user logged in");
   }
+});
+
+app.get("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    res.send("User logged out");
+  });
 });
 
 app.listen(PORT, () => {
