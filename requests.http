@@ -12,3 +12,9 @@ GET {{url}}/login/ac
  
 ### BAD LOGIN
 GET {{url}}/login/nnn
+
+### GET LOGGED IN USER
+GET {{url}}/current-user
+
+### LOGOUT
+GET {{url}}/logout
