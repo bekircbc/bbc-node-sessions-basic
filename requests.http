@@ -1,0 +1,14 @@
+@url = http://localhost:3024
+
+### base route
+
+{{url}}
+
+### LOGIN JOERG
+GET {{url}}/login/ja
+ 
+### LOGIN ANGELIKA
+GET {{url}}/login/ac
+ 
+### BAD LOGIN
+GET {{url}}/login/nnn
