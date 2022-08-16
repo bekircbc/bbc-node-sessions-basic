@@ -1,9 +1,12 @@
 import express from "express";
 import session from "express-session";
 import cookieParser from "cookie-parser";
+import dotenv from "dotenv";
 
 const app = express();
 const PORT = 3024;
+
+dotenv.config();
 
 //setup for sessions
 
